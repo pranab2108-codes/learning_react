@@ -12,13 +12,13 @@ function NotReRendering() {
 
   },3000);
 
-  return <DummyButton a={a}></DummyButton>;                           /* Even after we pass the a to child component named as DummyButton it still can't re render because it is not a state in React and also we are not setting any updater function which would look after the state. */
+  return <DummyButton a={a}></DummyButton>                            /* Even after we pass the a to child component named as DummyButton it still can't re render because it is not a state in React and also we are not setting any updater function which would look after the state. */
 
 }
 
 function DummyButton(props) {
 
-  return <div>{props.a}</div>;                                        /* It only render one time, then it can never re render it. */
+  return <div>{props.a}</div>                                         /* It only render one time, then it can never re render it. */
 
 }
 
