@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 function CountApp2() {                                                              /* Here CountApp2 is a component but this is the root component, a component can have many component. */
 
   const [count, setCount] = useState(0); 
