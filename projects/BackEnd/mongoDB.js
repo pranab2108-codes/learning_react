@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://admin:Codes2108@cluster0.bfysxu8.mongodb.net/todos');
+mongoose.connect('mongodb+srv://cluster_username:cluster_password@cluster0.bfysxu8.mongodb.net/todos');
 
 
 const todoSchema = mongoose.Schema({
