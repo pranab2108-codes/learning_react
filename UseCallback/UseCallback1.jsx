@@ -25,9 +25,9 @@ function UseCallback1() {
   );                                                    /* We are passing the value of a in Demo component. */
 
 }
-
-const Demo = memo(function ({ a }) {                    /* Because of the memo written this part means hi there will only run one time in whole process, doesn't matter hoe many time the button will get clicked, in console also the rerender word will get print once only. */
-
+                                                        /* If we would have not used the memo here then whenever the button will get clicked it will rerender the application UseCallback1, inside of it's Demo component is present, and we know this thing, if parent get rerender then child will also rerender even if the props of child not changed, so to avoid this unneccessary rerendering we use memo. */
+const Demo = memo(function ({ a }) {                    /* Because of the memo written this part means hi there will only run one time in whole process, doesn't matter how many times the button will get clicked, in console also the rerender word will get print once only. */
+                                                        /* The useMemo and memo are different things because, meo prevent rerendering but useMemo prevent recalculation, meo used for child components, but useMemo used for expensive logic. */
   console.log("rerender");                              /* Because of the memo it will compare between old value of a and new value of a, if they will be same then it won't rerender. */
   return <div>hi there {a}</div>
                                                         /* We are passing a primitive(Number) data that's why it compare with the value not with it's reference or address. */

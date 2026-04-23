@@ -7,7 +7,7 @@ function UseCallback3() {
 
   var a = useCallback( () =>{                                    /* This will avoid those unneccessary rerendering. */
 
-    console.log("Let see");                                      /* Beacuse of this empty dependecy array this function name "a" will get create only once, and then it store it's reference. */
+    console.log("Let see");                                      /* Beacuse of this empty dependecy array this function name "a" will get create only once, and then it store it's reference if later will be in use. */
 
   },[]);
 
@@ -43,9 +43,9 @@ export default UseCallback3;
 // import { StrictMode } from 'react'                            /* This should be written in src/main.jsx. */
 // import { createRoot } from 'react-dom/client'
 // import './index.css'
-// import UseCallback1 from '../UseCallback/UseCallback1.jsx';
+// import UseCallback3 from '../UseCallback/UseCallback3.jsx';
 // createRoot(document.getElementById('root')).render(
   
-//     <UseCallback1 />
+//     <UseCallback3 />
     
 // );
