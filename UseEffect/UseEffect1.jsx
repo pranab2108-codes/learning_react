@@ -4,7 +4,7 @@ import { useEffect } from "react";                                        /* The
 
 function UseEffect1() {                                                   /* If we fetch something from any site and we do rendering that, then it will act as a loop, it will keep rerender the application and do fetch each time. */
 
-  const [todos, setTodos] = useState({});
+  const [todos, setTodos] = useState([]);
 
   useEffect(() => {
 

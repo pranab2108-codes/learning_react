@@ -45,7 +45,7 @@ function UseEffect2() {
 
 function Todo({ id }) {
 
-  const [todo, setTodo] = useState({});
+  const [todo, setTodo] = useState([]);
 
   useEffect(() => {
 
