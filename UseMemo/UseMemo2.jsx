@@ -15,7 +15,7 @@ function UseMemo2() {
         sum +=  i;
 
     }
-    setTotal(sum);                                                                      /* When the inputValue will change the sum should be calculated again means it should rerender the whole application */
+    setTotal(sum);                                                                      /* When the inputValue will change the sum should be calculated again means it should rerender the whole application UseMemo2. */
 
   },[inputValue]);                                                                      /* This is the condition, when the inputValue get change, at that moment only this for loop will run. */                  
 
