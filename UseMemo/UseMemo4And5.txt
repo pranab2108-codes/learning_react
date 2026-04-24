@@ -1,0 +1,7 @@
+Let’s say you have your crypto stored in 3 different exchanges (CoinDCX/WazirX/Binance)
+You got the returns from all three places
+You added them and gave it to the CA
+Now you got your income report
+
+Q:- Will you re-calculate the sum of all the crypto returns?
+ANS:- No, Because it is unneccessary.
