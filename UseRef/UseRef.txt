@@ -1,0 +1,5 @@
+Let’s say you want to do some tax evasion
+You want to override what your CA calculated as your income tax
+Q:- How would u do it? You would report an incorrect value to the government
+
+ANS:- By using the useRef...
