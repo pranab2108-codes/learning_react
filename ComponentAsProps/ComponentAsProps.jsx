@@ -2,9 +2,9 @@ function ComponentAsProps() {
                                                                      /* Here we are passing the component as input/props/parameter to another component. */
   return <div>
 
-            <Wrapper1 innerComponent={<TextComponent />}></Wrapper1>
+            <Wrapper1 innerComponent={<TextComponent/>}></Wrapper1>
             <Wrapper2><div>Hi there</div></Wrapper2>
-            <Wrapper2><Wrapper1 innerComponent={<TextComponent />}></Wrapper1></Wrapper2>
+            <Wrapper2><Wrapper1 innerComponent={<TextComponent/>}></Wrapper1></Wrapper2>
     
          </div>
                                                                      /* After the "Wrapper2" whatever written in there all those can be consider as a child, a child can be either a component or an XML expression also. */
