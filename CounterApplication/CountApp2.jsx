@@ -7,12 +7,12 @@ function CountApp2() {                                                          
 
   return (
                                                                                     /* Here we can see one of the biggest feature of component which is reusability. */
-    <div style={{backgroundColor:"orange",height:"100vh",display:"flex",justifyContent:"center",alignItems:"center",flex:"wrap",alignContent:"center"}}>
+    <div style={{backgroundColor: "orange", height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", flex: "wrap", alignContent: "center"}}>
 
-      <CustomButton count={count} setCount={setCount} style={{color:"white"}}></CustomButton>                
-      <CustomButton count={count+1} setCount={setCount} style={{color:"white"}}></CustomButton> 
-      <CustomButton count={count-2} setCount={setCount} style={{color:"white"}}></CustomButton>
-      <CustomButton count={count*3} setCount={setCount} style={{color:"white"}}></CustomButton>               
+    	<CustomButton count={count} setCount={setCount} style={{color:"white"}}></CustomButton>                
+			<CustomButton count={count+1} setCount={setCount} style={{color:"white"}}></CustomButton> 
+			<CustomButton count={count-2} setCount={setCount} style={{color:"white"}}></CustomButton>
+			<CustomButton count={count*3} setCount={setCount} style={{color:"white"}}></CustomButton>               
                                                                                     
     </div>                                                                          /* Here this component CountApp2 returning a function called CustomButton, inside of this it is returning a button. */
                                                                                     /* Count and setCount are parameters to this CustomButton. */
@@ -30,9 +30,9 @@ function CustomButton(props) {                                                  
 
   return (
 
-    <button onClick={onClickHandler} style={{backgroundColor:props.style.color,color:"green",fontWeight:"bolder",height:"100px",width:"100px",display:"flex",justifyContent:"center",alignItems:"center"}}>Counter {props.count}</button>
+    <button onClick={onClickHandler} style={{backgroundColor:props.style.color, color: "green", fontWeight: "bolder", height: "100px", width: "100px", display: "flex", justifyContent: "center", alignItems: "center"}}>Counter {props.count}</button>
   
-   );
+  );
 
 }
 
@@ -43,8 +43,9 @@ export default CountApp2;
 // import { createRoot } from 'react-dom/client';
 // import './index.css';
 // import CountApp2 from '../CounterApplication/CountApp2.jsx';
+
 // createRoot(document.getElementById('root')).render(                              /* This is where the rendering and re-rendering is happening. */
 
-//     <CountApp2 />
+//   <CountApp2 />
 
 // );
