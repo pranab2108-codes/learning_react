@@ -8,11 +8,11 @@ function useTodos() {                                        /* The customHooks 
   useEffect(() => {
 
     axios.get("https://sum-server.100xdevs.com/todos")
-        .then((res) => {
+      .then((res) => {
 
-            setTodos(res.data.todos);
+        setTodos(res.data.todos);
 
-        });
+      });
 
   }, []);
 
@@ -43,8 +43,9 @@ export default CustomHook;
 // import { createRoot } from 'react-dom/client'
 // import './index.css'
 // import CustomHook from '../CustomHook/CustomHook.jsx';
+
 // createRoot(document.getElementById('root')).render(
   
-//     <CustomHook/>
+//   <CustomHook />
     
 // );
