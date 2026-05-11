@@ -1,42 +1,42 @@
-function ComponentAsProps(){
+function ComponentAsProps() {
                                                                      /* Here we are passing the component as input/props/parameter to another component. */
-    return <div>
+  return <div>
 
-               <Wrapper1 innerComponent={<TextComponent />}></Wrapper1>
-               <Wrapper2><div>Hi There.</div></Wrapper2>
-               <Wrapper2><Wrapper1 innerComponent={<TextComponent />}></Wrapper1></Wrapper2>
+            <Wrapper1 innerComponent={<TextComponent />}></Wrapper1>
+            <Wrapper2><div>Hi there</div></Wrapper2>
+            <Wrapper2><Wrapper1 innerComponent={<TextComponent />}></Wrapper1></Wrapper2>
     
-           </div>
+         </div>
                                                                      /* After the "Wrapper2" whatever written in there all those can be consider as a child, a child can be either a component or an XML expression also. */
 }
 
-function TextComponent(){
+function TextComponent() {
 
-    return <div>
+  return <div>
 
-               Hey people.
+            Hey people
 
-           </div>
-
-}
-
-function Wrapper1({innerComponent}){
-
-    return <div style={{border:"2px solid black", padding:"20px"}}>
-
-               {innerComponent}
-
-           </div>
+         </div>
 
 }
 
-function Wrapper2({children}){
+function Wrapper1({ innerComponent }) {
 
-    return <div style={{border:"2px solid red", padding:"20px"}}>
+  return <div style={{border: "2px solid black", padding: "20px"}}>
 
-               {children}
+            {innerComponent}
 
-           </div>
+         </div>
+
+}
+
+function Wrapper2({ children }) {
+
+  return <div style={{border: "2px solid red", padding: "20px"}}>
+
+            {children}
+
+         </div>
 
 }
 
@@ -47,8 +47,9 @@ export default ComponentAsProps;
 // import { createRoot } from 'react-dom/client'
 // import './index.css'
 // import ComponentAsProps from '../ComponentAsProps/ComponentAsProps.jsx';
+
 // createRoot(document.getElementById('root')).render(
   
-//     <ComponentAsProps />
+//   <ComponentAsProps />
     
 // );
