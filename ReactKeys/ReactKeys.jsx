@@ -11,33 +11,33 @@ function ReactKeys() {
 
       id: 1,
       title: "Go to Gym",
-      description: "go to gym today",
+      description: "Go to gym today",
 
     },
     {
 
       id: 2,
       title: "Eat food",
-      description: "eat food now",
+      description: "Eat food now",
 
     },
     {
 
       id: 3,
       title: "Go to class",
-      description: "go to class at evening",
+      description: "Go to class at evening",
 
     },
 
   ]);
      
-  function addTodo(){
+  function addTodo() {
 
     setTodos([...todos, {
 
-        id:id++,
-        title: Math.random(),
-        description: Math.random()
+      id:id++,
+      title: Math.random(),
+      description: Math.random()
 
     }]);
 
@@ -45,10 +45,10 @@ function ReactKeys() {
                                                                                   /* Here key play an important role, if our todos ever been updated like id2 todo got replaced by id4 for some reason or few got removed totally or few got added so it help to optimally rerender otherwise React find the difference very difficultly and remove the whole DOM and add according to the new state. */
   return <div> 
 
-    {todos.map(todo => <Todo key={todo.id} title={todo.title} description={todo.description}></Todo>)}
-    <button onClick={addTodo}>Add a Todo</button>
+            {todos.map(todo => <Todo key={todo.id} title={todo.title} description={todo.description}></Todo>)}
+            <button onClick={addTodo}>Add a todo</button>
 
-  </div>
+         </div>
 
 }
 
@@ -74,8 +74,9 @@ export default ReactKeys;
 // import { createRoot } from 'react-dom/client'
 // import './index.css'
 // import ReactKeys from '../ReactKeys/ReactKeys.jsx';
+
 // createRoot(document.getElementById('root')).render(
   
-//     <ReactMemo />
+//   <ReactMemo />
     
 // );
