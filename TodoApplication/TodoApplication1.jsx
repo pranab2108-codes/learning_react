@@ -7,13 +7,13 @@ function TodoApplication1() {
 
     title: "Goto Gym",
     description: "From 6:00 AM - 8:00 AM",
-    completed: false,
+    completed: false
 
   },{
 
     title: "Goto Study DSA",
     description: "From 9:00 AM - 12:00 PM",
-    completed: true,
+    completed: true
 
   }]);
                                                                                                       /* We can't directly put the todos because it won't run because in JavaScriptXml React can render directly few things like Strings, Numbers, JSX elements, Array of JSX elements, and here todos is an array of objects. */
