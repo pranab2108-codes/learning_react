@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 
 
 export const Assignment3 = () => {
@@ -8,14 +8,14 @@ export const Assignment3 = () => {
     { name: 'Chocolates', value: 10 },
     { name: 'Chips', value: 20 },
     { name: 'Onion', value: 30 },
-    { name: 'Tomato', value: 30 },
+    { name: 'Tomato', value: 30 }
 
   ]);
 
   const totalValue = useMemo(() => {
 
     let value = 0;
-    for (let i = 0; i < items.length; i++) {
+    for(let i = 0; i < items.length; i++) {
 
       value = value + items[i].value;
 

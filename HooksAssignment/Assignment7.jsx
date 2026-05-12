@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef } from 'react';
 
                                                                               
 export function Assignment7() {                                                      /* This solve the problem of how many times, it rerendering. */
@@ -19,7 +19,7 @@ export function Assignment7() {                                                 
     <div>
 
       <p>This component has rendered {numberOfTimesReRendered.current} times</p>
-      <button onClick={handleReRender}>Force re-render</button>
+      <button onClick={handleReRender}>Force rerender</button>
 
     </div>
 
