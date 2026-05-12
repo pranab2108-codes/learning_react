@@ -11,23 +11,23 @@ function ReactKeys() {
 
       id: 1,
       title: "Go to Gym",
-      description: "Go to gym today",
+      description: "Go to gym today"
 
     },
     {
 
       id: 2,
       title: "Eat food",
-      description: "Eat food now",
+      description: "Eat food now"
 
     },
     {
 
       id: 3,
       title: "Go to class",
-      description: "Go to class at evening",
+      description: "Go to class at evening"
 
-    },
+    }
 
   ]);
      
