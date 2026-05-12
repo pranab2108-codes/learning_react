@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-const words = ["hi", "my", "name", "is", "for", "to", "random", "word" ];
+const words = ["hi", "my", "name", "is", "for", "to", "random", "word"];
 const TOTAL_LINES = 1000;
 const ALL_WORDS = [];
 
@@ -25,26 +25,26 @@ export function Assignment2() {
 
     return sentences.filter((x) => x.includes(filter));
 
-  },[sentences, filter]);                                                         /* Even a single parameter change cause a rerender. */
+  }, [sentences, filter]);                                                        /* Even a single parameter change cause a rerender. */
 
   return <div>
 
-    <input type="text" onChange={(event) => setFilter(event.target.value)}></input>
-    {filteredSentences.map((word) => {
+          <input type="text" onChange={(event) => setFilter(event.target.value)}></input>
+          {filteredSentences.map((word) => {
 
-       return(
+            return(
 
-         <div>
+              <div>
 
-            {word}
+                {word}
+
+              </div>
+
+            );
+
+          })}
 
          </div>
-
-       );
-
-    })}
-
-  </div>
 
 }
 
@@ -53,8 +53,9 @@ export function Assignment2() {
 // import { createRoot } from 'react-dom/client'
 // import './index.css'
 // import { Assignment2 } from '../HooksAssignment/Assignment2.jsx';
+
 // createRoot(document.getElementById('root')).render(
   
-//     <Assignment2/>
+//   <Assignment2/>
     
 // );

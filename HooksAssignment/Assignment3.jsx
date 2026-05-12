@@ -3,55 +3,56 @@ import React, { useState, useMemo } from 'react';
 
 export const Assignment3 = () => {
 
-    const [items, setItems] = useState([
+  const [items, setItems] = useState([
 
-        { name: 'Chocolates', value: 10 },
-        { name: 'Chips', value: 20 },
-        { name: 'Onion', value: 30 },
-        { name: 'Tomato', value: 30 },
-        
-    ]);
+    { name: 'Chocolates', value: 10 },
+    { name: 'Chips', value: 20 },
+    { name: 'Onion', value: 30 },
+    { name: 'Tomato', value: 30 },
 
-    const totalValue = useMemo( () =>{
+  ]);
 
-        let value = 0;
-        for (let i = 0; i < items.length; i++) {
+  const totalValue = useMemo(() => {
 
-            value = value + items[i].value;
+    let value = 0;
+    for (let i = 0; i < items.length; i++) {
 
-        }
-        return value;
+      value = value + items[i].value;
 
-    },[items]);                                                                /* Whenever the items getting changes, then only this costly opration should run. */
+    }
+    return value;
 
-    return (
+  }, [items]);                                                           /* Whenever the items getting changes, then only this costly operation should run. */
 
-        <div>
+  return (
 
-            <ul>
+    <div>
 
-                {items.map((item, index) => (
+      <ul>
 
-                    <li key={index}>{item.name} - Price: ${item.value}</li>
-                
-                ))}
+        {items.map((item, index) => (
 
-            </ul>
-            <p>Total Value: {totalValue}</p>
+          <li key={index}>{item.name} - Price: ${item.value}</li>
 
-        </div>
+        ))}
 
-    );
+      </ul>
+      <p style={{marginLeft: "40px"}}>Total Value: {totalValue}</p>
+
+    </div>
+
+  );
 
 };
 
 
-// import { StrictMode } from 'react'                                          /* It should be written in src/main.jsx. */
+// import { StrictMode } from 'react'                                    /* It should be written in src/main.jsx. */
 // import { createRoot } from 'react-dom/client'
 // import './index.css'
 // import { Assignment3 } from '../HooksAssignment/Assignment3.jsx';
+
 // createRoot(document.getElementById('root')).render(
   
-//     <Assignment3/>
+//   <Assignment3/>
     
 // );

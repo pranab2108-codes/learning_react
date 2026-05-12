@@ -1,41 +1,43 @@
 import { useState, useCallback } from "react";
 
+
 export function Assignment5() {
 
-    const [inputText, setInputText] = useState('');
+  const [inputText, setInputText] = useState('');
 
-    const showAlert = useCallback(() => {
+  const showAlert = useCallback(() => {
 
-        alert(inputText);
+    alert(inputText);
 
-    }, [inputText]);
+  }, [inputText]);
 
-    return (
+  return (
 
-        <div>
+    <div>
 
-            <input type="text" value={inputText} onChange={(e) => setInputText(e.target.value)} placeholder="Enter some text"/>
-            <Alert showAlert={showAlert} />
+      <input type="text" value={inputText} onChange={(e) => setInputText(e.target.value)} placeholder="Enter some text"/>
+      <Alert showAlert={showAlert} />
 
-        </div>
+    </div>
 
-    );
+  );
 
-};
+}
 
-function Alert({showAlert}){
+function Alert({ showAlert }) {
 
-    return <button onClick={showAlert}>Show Alert</button>
+  return <button onClick={showAlert}>Show alert</button>
 
 }
 
 
-// import { StrictMode } from 'react'                                          /* It should be written in src/main.jsx. */
+// import { StrictMode } from 'react'                                    /* It should be written in src/main.jsx. */
 // import { createRoot } from 'react-dom/client'
 // import './index.css'
 // import { Assignment5 } from '../HooksAssignment/Assignment5.jsx';
+
 // createRoot(document.getElementById('root')).render(
   
-//     <Assignment5/>
+//   <Assignment5/>
     
 // );
