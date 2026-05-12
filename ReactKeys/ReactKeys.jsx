@@ -35,7 +35,7 @@ function ReactKeys() {
 
     setTodos([...todos, {
 
-      id:id++,
+      id: id++,
       title: Math.random(),
       description: Math.random()
 
