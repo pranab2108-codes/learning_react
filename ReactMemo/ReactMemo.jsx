@@ -4,11 +4,11 @@ import { useState } from "react";
 
 function ReactMemo() {
 
-  const [title, setTitle] = useState("my name is Pranab");
+  const [title, setTitle] = useState("My name is Pranab");
 
   function updateTitle() {
 
-    setTitle("my name is " + Math.random());
+    setTitle("My name is: " + Math.random());
 
   }
                                                                                     /* Here we can see the "Kanhu" and "Piyush" not getting changed so these won't rerender. */
@@ -40,8 +40,9 @@ export default ReactMemo;
 // import { createRoot } from 'react-dom/client'
 // import './index.css'
 // import ReactMemo from '../ReactMemo/ReactMemo.jsx';
+
 // createRoot(document.getElementById('root')).render(
   
-//     <ReactMemo />
+//   <ReactMemo />
     
 // );
