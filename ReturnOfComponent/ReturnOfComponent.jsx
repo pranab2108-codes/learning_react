@@ -1,49 +1,45 @@
 function ReturnOfComponent() {                                          /* In React the component always return a XML. */
 
-    return (
-
-        <Header title="My first name is Pranab"></Header>
-
-    );
+  return <Header title="My first name is Pranab"></Header>
                                                                         /* If there will be more than one line inside of return then it should be wrap inside of one parent, like "<div>....</div>" or "<>...</>". */        
-    // return (
+  // return (
 
-    //     <Header title="My first name is Pranab"></Header>
-    //     <Header title="My last name is Sethi"></Header>
+  //   <Header title="My first name is Pranab"></Header>
+  //   <Header title="My last name is Sethi"></Header>
 
-    // );
+  // );
                                                                         /* OR */
-    return(
+  return(
 
-        <>
-         
-        <Header title="My first name is Pranab"></Header>
-        <Header title="My last name is Sethi"></Header>
+    <>
+       
+      <Header title="My first name is Pranab"></Header>
+      <Header title="My last name is Sethi"></Header>
 
-        </>
+    </>
 
-    );
+  );
                                                                         /* OR */
-    return(
+  return(
 
-        <div>
-         
-        <Header title="My first name is Pranab"></Header>
-        <Header title="My last name is Sethi"></Header>
+    <div>
+       
+      <Header title="My first name is Pranab"></Header>
+      <Header title="My last name is Sethi"></Header>
 
-        </div>
+    </div>
 
-    );
+  );
                                                                         /* Although the first valid return will only run because one function can return one statement, after that whatever the lines will be present below the return will never execute. */
 }
 
-function Header({title}){                                               /* Here title is act as props, this is called as destructuring. */
+function Header({ title }) {                                            /* Here title is act as props, this is called as destructuring. */
 
-    return <div>
+  return <div>
 
-        {title}
+            {title}
 
-    </div>
+         </div>
 
 }
 
@@ -54,8 +50,9 @@ export default ReturnOfComponent;
 // import { createRoot } from 'react-dom/client'
 // import './index.css'
 // import ReturnOfComponent from '../ReturnOfComponent/ReturnOfComponent.jsx';
+
 // createRoot(document.getElementById('root')).render(
   
-//     <ReturnOfComponent />
+//   <ReturnOfComponent />
     
 // );
