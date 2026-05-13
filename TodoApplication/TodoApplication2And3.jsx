@@ -40,12 +40,12 @@ function TodoApplication2() {
 
     <div>       
 
-      <Todo2 title="Pranab" description="Software Engineer"> </Todo2>                                                         
-      <Todo2 title="Deepak" description="Software Engineer"> </Todo2>
-      <Todo2 title="Souvik" description="Sr. Developer"> </Todo2>
+      <Todo2 title="Pranab" description="Software Engineer"></Todo2>                                                         
+      <Todo2 title="Deepak" description="Software Engineer"></Todo2>
+      <Todo2 title="Souvik" description="Sr. Developer"></Todo2>
       <Todo2 title={todos2[0].title} description={todos2[0].description}></Todo2>                       
       <Todo2 title={todos2[1].title} description={todos2[1].description}></Todo2>
-      {todos2[2] ? (<Todo2 title={todos2[2].title} description={todos2[2].description} />) : null}            
+      {todos2[2] ? (<Todo2 title={todos2[2].title} description={todos2[2].description}/>) : null}            
       <button onClick={addTodo2}>Adding a random todo</button>
 
     </div>
