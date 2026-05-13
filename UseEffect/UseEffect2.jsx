@@ -15,27 +15,26 @@ function UseEffect2() {
 
           setSelectedId(1);
 
-        }}
-      >Button 1
+        }}>Button 1
+
       </button>
 
       <button onClick={function () {
 
           setSelectedId(2);
 
-        }}
-      >Button 2
+        }}>Button 2
+
       </button>
 
       <button onClick={function () {
 
           setSelectedId(3);
 
-        }}
-      >Button 3
+        }}>Button 3
+        
       </button>
-
-      <Todo id={selectedId} />
+      <Todo id={selectedId}/>
 
     </div>
 
@@ -56,7 +55,7 @@ function Todo({ id }) {
 
     });
 
-  }, [id]);                                                      /* Here it means if any button get clicked means id will change, so the endpoint/URL going to hit again which makes it fetch new todo, but if we would have not given the id means let it be an empty array, then doesn't matter how many times we click any button among thse three, the todo will never get change means fetch will run only one time not anymore at all again. */
+  }, [id]);                                                      /* Here it means if any button get clicked means id will change, so the endpoint/URL going to hit again which makes it fetch new todo, but if we would have not given the id means let it be an empty array, then doesn't matter how many times we click any button among these three, the todo will never get change means fetch will run only one time not anymore at all again. */
 
   return ( 
   
@@ -79,8 +78,9 @@ export default UseEffect2;
 // import { createRoot } from 'react-dom/client'
 // import './index.css'
 // import UseEffect2 from '../UseEffect/UseEffect2.jsx';
+
 // createRoot(document.getElementById('root')).render(
   
-//     <UseEffect2 />
+//   <UseEffect2 />
     
 // );

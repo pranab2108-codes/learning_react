@@ -26,7 +26,7 @@ function UseEffect3() {
 
     <div>
 
-      hi there, your income tax returns are {incomeTax}
+      Hi there, your income tax returns are {incomeTax}
     
     </div>
 
@@ -41,8 +41,9 @@ export default UseEffect3;
 // import { createRoot } from 'react-dom/client'
 // import './index.css'
 // import UseEffect3 from '../UseEffect/UseEffect3.jsx';
+
 // createRoot(document.getElementById('root')).render(
   
-//     <UseEffect3/>
+//   <UseEffect3 />
     
 // );

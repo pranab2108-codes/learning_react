@@ -6,7 +6,7 @@ function UseEffect4() {
   const [exchangeData, setExchangeData] = useState({});
   const [bankData, setBankData] = useState({});
 
-  useEffect( () => {                                                       /* It(Everyone) only render once, not anymore after that. */
+  useEffect(() => {                                                        /* It(Everyone) only render once, not anymore after that. */
 
     setTimeout(() => {
 
@@ -15,9 +15,9 @@ function UseEffect4() {
 
     }, 10000);
 
-  },[]);
+  }, []);
   
-  useEffect( () => {                                                       /* It(Hey) only render once, not anymore after that. */
+  useEffect(() => {                                                        /* It(Hey) only render once, not anymore after that. */
 
     console.log("Hey");
     setTimeout(() => {
@@ -26,7 +26,7 @@ function UseEffect4() {
 
     }, 1000);
 
-  },[]);
+  }, []);
 
   const incomeTax = (bankData.income + exchangeData.returns) * 0.3;
 
@@ -34,7 +34,7 @@ function UseEffect4() {
 
     <div>
 
-      hi there, your income tax returns are {incomeTax}
+      Hi there, your income tax returns are {incomeTax}
     
     </div>
 
@@ -49,8 +49,9 @@ export default UseEffect4;
 // import { createRoot } from 'react-dom/client'
 // import './index.css'
 // import UseEffect4 from '../UseEffect/UseEffect4.jsx';
+
 // createRoot(document.getElementById('root')).render(
   
-//     <UseEffect4/>
+//   <UseEffect4 />
     
 // );

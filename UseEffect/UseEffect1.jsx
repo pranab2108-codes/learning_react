@@ -1,18 +1,18 @@
 import { useState } from "react";
-import { useEffect } from "react";                                        /* The useState allow us to perform side effects in function components, side effects are the operations that can affect other components or can't be done during rendering, such as fetching, subscription, or manually changing the DOM in React components. */
+import { useEffect } from "react";                                        /* The useEffect allow us to perform side effects in function components, side effects are the operations that happen outside the normal rendering process, such as fetching, subscription, or manually changing the DOM in React components. */
 
 
-function UseEffect1() {                                                   /* If we fetch something from any site and we do rendering that, then it will act as a loop, it will keep rerender the application and do fetch each time. */
+function UseEffect1() {                                                   /* If we fetch something from any site and we do rendering that, then it will act as a loop, it will keep rerender the application and do fetch each time, to stop this infinite loop we have to use useEffect. */
 
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
 
-    fetch("https://sum-server.100xdevs.com/todos")
+    fetch("https://sum-server.100xdevs.com/todos")                        
       .then(async function (res) {
 
         const json = await res.json();
-        setTodos(json.todos);                                             /* Whenever the setTodos get called this application will again rerender if we would haven't used this useEffect then the fetch call would have called again which is unneccessary, and it's making the whole situation look like a loop. */
+        setTodos(json.todos);                                             /* Whenever the setTodos get called this application will again rerender if we would hadn't used this useEffect then the fetch call would have called again which is unneccessary, and it's making the whole situation look like a loop. */
 
       });                                                                 /* In a F1 car race there are 100laps but the car need to stop in pit stop under some condition only, not all the time unneccessarily. */
 
@@ -22,7 +22,7 @@ function UseEffect1() {                                                   /* If 
 
     <div>
 
-      {todos.map((todo) => <Todo key={todo.id} title={todo.title} description={todo.description} />)}
+      {todos.map((todo) => <Todo key={todo.id} title={todo.title} description={todo.description}/>)}
     
     </div>
 
@@ -30,14 +30,14 @@ function UseEffect1() {                                                   /* If 
 
 }
 
-function Todo(){
+function Todo() {
 
     return <div>
 
-        <h1>{title}</h1>
-        {description}
+              <h1>{title}</h1>
+              {description}
 
-    </div>
+           </div>
 
 }
 
@@ -48,8 +48,9 @@ export default UseEffect1;
 // import { createRoot } from 'react-dom/client'
 // import './index.css'
 // import UseEffect1 from '../UseEffect/UseEffect1.jsx';
+
 // createRoot(document.getElementById('root')).render(
   
-//     <UseEffect1 />
+//   <UseEffect1 />
     
 // );
