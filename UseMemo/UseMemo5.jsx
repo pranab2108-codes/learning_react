@@ -25,16 +25,16 @@ function UseMemo5() {
 
       setBankData({income: 100});
 
-    },5000);
+    }, 5000);
 
   }, []);
 
-  const cryptoReturns = useMemo( () => {
+  const cryptoReturns = useMemo(() => {
 
     console.log("Hey");
     return exchange1Data.returns + exchange2Data.returns;                            /* Here now because of useMemo the recalculation got avoided. */
   
-  },[exchange1Data,exchange2Data]);                                                  /* It means it only get run when the exchange1Data or exchange2Data get change. */
+  }, [exchange1Data, exchange2Data]);                                                /* It means it only get run when the exchange1Data or exchange2Data get change. */
 
   console.log("Everyone");
   const incomeTax = (cryptoReturns + bankData.income) * 0.3;
@@ -43,7 +43,7 @@ function UseMemo5() {
 
     <div>
 
-      hi there, your income tax returns are {incomeTax}
+      Hi there, your income tax returns are {incomeTax}
 
     </div>
 
@@ -58,8 +58,9 @@ export default UseMemo5;
 // import { createRoot } from 'react-dom/client'
 // import './index.css'
 // import UseMemo5 from '../UseMemo/UseMemo5.jsx';
+
 // createRoot(document.getElementById('root')).render(
   
-//     <UseMemo5/>
+//   <UseMemo5 />
     
 // );
