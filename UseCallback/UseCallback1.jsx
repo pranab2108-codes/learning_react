@@ -1,4 +1,4 @@
-import { memo, useEffect, useMemo, useState } from "react";
+import { memo, useState } from "react";
 
 
 function UseCallback1() {

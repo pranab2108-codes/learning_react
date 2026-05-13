@@ -1,4 +1,4 @@
-import { memo, useEffect, useMemo, useState } from "react";
+import { memo, useState } from "react";
 
 
 function UseCallback2() {
@@ -22,7 +22,7 @@ function UseCallback2() {
         }} style={{backgroundColor: "blue", color: "whitesmoke"}}>Counter ({counter})
 
       </button>
-      <Demo a={a} />
+      <Demo a={a}/>
 
     </div>
 

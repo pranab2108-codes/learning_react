@@ -22,7 +22,7 @@ function UseCallback4() {
         }} style={{backgroundColor: "black", color: "white"}}>Click me {count}
       
       </button>
-      <ButtonComponent inputFunction={logSomething} />
+      <ButtonComponent inputFunction={logSomething}/>
 
     </div>
 

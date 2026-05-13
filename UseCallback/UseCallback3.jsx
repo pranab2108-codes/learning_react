@@ -1,4 +1,4 @@
-import { memo, useCallback, useEffect, useMemo, useState } from "react";
+import { memo, useCallback, useState } from "react";
 
 
 function UseCallback3() {                                       
@@ -22,7 +22,7 @@ function UseCallback3() {
         }} style={{backgroundColor: "brown", color: "whitesmoke"}}>Counter ({counter})
       
       </button>
-      <Demo a={a} />                                             
+      <Demo a={a}/>                                             
 
     </div>
 

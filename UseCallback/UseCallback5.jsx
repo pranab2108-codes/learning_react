@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, memo, useCallback } from 'react';
+import { useEffect, useState, memo, useCallback } from 'react';
 
 
 function UseCallback5() {
@@ -9,21 +9,13 @@ function UseCallback5() {
 
   useEffect(() => {
    
-    setExchange1Data({
-
-      returns: 100
-
-    });
+    setExchange1Data({returns: 100});
 
   }, []);
 
   useEffect(() => {
     
-    setExchange2Data({
-
-      returns: 100
-
-    });
+    setExchange2Data({returns: 100});
 
   }, []);
 
@@ -31,11 +23,7 @@ function UseCallback5() {
    
     setTimeout(() => {
 
-      setBankData({
-
-        income: 100
-
-      });
+      setBankData({income: 100});
 
     }, 5000);
 
