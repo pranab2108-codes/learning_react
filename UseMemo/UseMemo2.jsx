@@ -10,7 +10,7 @@ function UseMemo2() {
   useEffect(() => {                                                                     /* That's why we are taking a new state here so that the sum can be store and we can access the sum from outside of the useEffect. */                                                               
 
     let sum = 0;                                                                        /* when the button was getting rerender the whole application UseMemo1 was also rerendering so we have kept this for loop inside of useEffect, so that it can run only on certain conditions. */
-    for (let i = 1; i <= inputValue; i++) {                                             /* Now the only problem is, it is not using memoization. */
+    for(let i = 1; i <= inputValue; i++) {                                              /* Now the only problem is, it is not using memoization. */
 
         sum +=  i;
 
@@ -30,10 +30,10 @@ function UseMemo2() {
         }} placeholder={"Find sum from 1 to n"}>
 
       </input>
-      <br /><br />
+      <br/><br/>
 
       Sum from 1 to {inputValue} is {total}
-      <br /><br />
+      <br/><br/>
 
       <button onClick={() => {
 

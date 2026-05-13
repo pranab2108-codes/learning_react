@@ -9,7 +9,7 @@ function UseMemo3() {
   const total = useMemo(() => {                                                         /* The useEffect couldn't return any value so that's why a better approach is to use useMemo. */
 
     let sum = 0;                                                                        /* when the button is getting rerender the whole application UseMemo1 also rerender so we have kept this for this inside of useEffect, so that it can run only on certain conditions. */
-    for (let i = 1; i <= inputValue; i++) {                                             /* Here it is using memoization. */
+    for(let i = 1; i <= inputValue; i++) {                                              /* Here it is using memoization. */
 
         sum +=  i;
 
@@ -29,10 +29,10 @@ function UseMemo3() {
         }} placeholder={"Find sum from 1 to n"}>
 
       </input>
-      <br /><br />
+      <br/><br/>
 
       Sum from 1 to {inputValue} is {total}
-      <br /><br />
+      <br/><br/>
 
       <button onClick={() => {
 
