@@ -18,7 +18,7 @@ function UseRef1() {
 
     <div>
 
-      hi there, your income tax returns are <div id="incomeTaxContainer">{incomeTax}</div>
+      Hi there, your income tax returns are <div id="incomeTaxContainer">{incomeTax}</div>
     
     </div>
 
@@ -33,8 +33,9 @@ export default UseRef1;
 // import { createRoot } from 'react-dom/client'
 // import './index.css'
 // import UseRef1 from '../UseRef/UseRef1';
+
 // createRoot(document.getElementById('root')).render(
   
-//     <UseRef1/>
+//   <UseRef1 />
     
 // );

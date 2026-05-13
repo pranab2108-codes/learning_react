@@ -20,11 +20,11 @@ function UseRef2() {
 
     <div>
 
-      hi there, your income tax returns are <div ref={divRef}>{incomeTax}</div>
+      Hi there, your income tax returns are <div ref={divRef}>{incomeTax}</div>
     
     </div>
 
-  );                                                                          /* Not neccessary to put this ref variable inside div container. */
+  );                                                                          /* Not neccessary to put this ref inside div container only. */
 
 }
 
@@ -35,8 +35,9 @@ export default UseRef2;
 // import { createRoot } from 'react-dom/client'
 // import './index.css'
 // import UseRef2 from '../UseRef/UseRef2';
+
 // createRoot(document.getElementById('root')).render(
   
-//     <UseRef2/>
+//   <UseRef2 />
     
 // );
