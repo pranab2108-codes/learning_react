@@ -41,17 +41,17 @@ function UseCallback5() {
 
   }, []);
 
-  const calculateCryptoReturns = useCallback(function(){                                           /* We know if the parent component is rerendering then it is also affecting the child component but sometimes the child component doesn't require the rerendering, so we use useCallback to avoid make rerendering to the child component. */
+  const calculateCryptoReturns = useCallback(function () {                                           /* We know if the parent component is rerendering then it is also affecting the child component but sometimes the child component doesn't require the rerendering, so we use useCallback to avoid make rerendering to the child component. */
 
     return exchange1Data.returns + exchange2Data.returns;
 
-  },[exchange1Data,exchange2Data]);
+  }, [exchange1Data, exchange2Data]);
 
   return(
 
     <div>
 
-        <CryptoGainsCalculator calculateCryptoReturns= {calculateCryptoReturns}/>
+        <CryptoGainsCalculator calculateCryptoReturns={calculateCryptoReturns}/>
 
     </div>
 
@@ -59,9 +59,9 @@ function UseCallback5() {
 
 }
 
-const CryptoGainsCalculator = memo(function({calculateCryptoReturns}) {                            /* This memo and useMemo both are significantly different, not same. */
+const CryptoGainsCalculator = memo(function ({ calculateCryptoReturns }) {                           /* This memo and useMemo both are significantly different, not same. */
 
-    console.log("Crypto child re-render");                                                         /* Here memo tells that, if the props are not been changed at all, then it will never run, which helps to do less rerendering. */
+    console.log("Crypto child rerender");                                                            /* Here memo tells that, if the props are not been changed at all, then it will never run, which helps to do less rerendering. */
     return (
 
         <div>
@@ -77,12 +77,13 @@ const CryptoGainsCalculator = memo(function({calculateCryptoReturns}) {         
 export default UseCallback5;
 
 
-// import { StrictMode } from 'react'                                                              /* It should be written in src/main.jsx. */
+// import { StrictMode } from 'react'                                                                /* It should be written in src/main.jsx. */
 // import { createRoot } from 'react-dom/client'
 // import './index.css'
 // import UseCallback5 from '../UseCallback/UseCallback5';
+
 // createRoot(document.getElementById('root')).render(
   
-//     <UseCallback5/>
+//   <UseCallback5 />
     
 // );
