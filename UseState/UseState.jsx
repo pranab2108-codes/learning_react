@@ -9,7 +9,7 @@ function UseState() {
     
               <button onClick={function () {
 
-                  setCount(count+1);
+                  setCount(count + 1);
 
                 }} style={{backgroundColor: "red"}}>Click me {count}
               
