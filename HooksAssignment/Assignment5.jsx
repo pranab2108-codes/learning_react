@@ -16,7 +16,7 @@ export function Assignment5() {
     <div>
 
       <input type="text" value={inputText} onChange={(e) => setInputText(e.target.value)} placeholder="Enter some text"/>
-      <Alert showAlert={showAlert} />
+      <Alert showAlert={showAlert}/>
 
     </div>
 
