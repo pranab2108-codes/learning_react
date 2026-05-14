@@ -22,7 +22,7 @@ export function Assignment5() {
 
   );
 
-}
+};
 
 function Alert({ showAlert }) {
 

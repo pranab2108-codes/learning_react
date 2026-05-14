@@ -32,7 +32,7 @@ export function Assignment2() {
           <input type="text" onChange={(event) => setFilter(event.target.value)}></input>
           {filteredSentences.map((word) => {
 
-            return(
+            return (
 
               <div>
 
@@ -46,7 +46,7 @@ export function Assignment2() {
 
          </div>
 
-}
+};
 
 
 // import { StrictMode } from 'react'                                             /* It should be written in src/main.jsx. */

@@ -25,7 +25,7 @@ export function Assignment7() {                                                 
 
   );
 
-}
+};
 
 
 // import { StrictMode } from 'react'                                                /* It should be written in src/main.jsx. */

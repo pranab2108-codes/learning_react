@@ -19,7 +19,7 @@ export function Assignment4() {
 
     setCount((currentCount) => {                       /* This setCount and previous setCount of handleIncrement both are acting same. */
 
-      return currentCount - 1;
+      return currentCount - 1;                         /* Here currentCount is the parameter which is takes the value of state variable count. */
 
     });
 
@@ -36,7 +36,7 @@ export function Assignment4() {
 
   );
 
-}
+};
 
 const CounterButtons = memo(({ onIncrement, onDecrement }) => (
 
