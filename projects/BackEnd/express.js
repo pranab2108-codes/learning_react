@@ -6,84 +6,85 @@ const cors = require('cors');                                                   
 app.use(express.json());
 app.use(cors({                                                                   /* Here it means now backend will response to this frontend only, which is react not any others, but if we would do something like 'app.use(cors())' then it means the backend will allow all frontend, not only a specific frontend. */
 
-    origin: [
+  origin: [
 
-        "http://localhost:5174",                                                 /* Now React of my local machine only can have the access of the backend. */
-        "http://localhost:5173"
+    "http://localhost:5174",                                                     /* Now React of my local machine only can have the access of the backend. */
+    "http://localhost:5173"
 
-    ]
+  ]
 
 }));
 
 
 app.post("/todo", async (req,res) => {
 
-    const createPayLoad =  req.body;
-    const parsedPayLoad = createTodo.safeParse(createPayLoad);
-    if(!parsedPayLoad.success){
+  const createPayLoad =  req.body;
+  const parsedPayLoad = createTodo.safeParse(createPayLoad);
+  if(!parsedPayLoad.success){
 
-        res.status(411).json({
+    res.status(411).json({
 
-            message: "You have sent the wrong inputs"
-
-        });
-        return;
-
-    }
-    await todo.create({
-
-        title: createPayLoad.title,
-        description: createPayLoad.description,
-        completed: false
+      message: "You have sent the wrong inputs"
 
     });
-    res.json({
+    return;
 
-        message: "Todo created..."
+  }
+  await todo.create({
 
-    });
+    title: createPayLoad.title,
+    description: createPayLoad.description,
+    completed: false
+
+  });
+  res.json({
+
+    message: "Todo created..."
+
+  });
 
 });
 
 app.get("/todos", async (req,res) => {
 
-    const todos = await todo.find({});
-    res.json({
+  const todos = await todo.find({});
+  res.json({
 
-        todos: todos
+    todos: todos
 
-    });
+  });
 
 });
 
 app.put("/completed", async (req,res) => {
 
-    const updatePayLoad = req.body;
-    const parsedPayLoad = updateTodo.safeParse(updatePayLoad);
-    if(!parsedPayLoad.success){
+  const updatePayLoad = req.body;
+  const parsedPayLoad = updateTodo.safeParse(updatePayLoad);
+  if(!parsedPayLoad.success){
 
-        res.status(411).json({
+    res.status(411).json({
 
-            message: "You have sent the wrong id"
+      message: "You have sent the wrong id"
 
-        });
-        return;
+    });
+    return;
         
-    };
-    await todo.updateOne({
+  }
+  await todo.updateOne({
 
-        _id: req.body.id
+    _id: req.body.id
 
-    },{
+  },
+  {
 
-        completed: true
+    completed: true
 
-    });
-    res.json({
+  });
+  res.json({
 
-        message: "Todo marked as completed..."
+    message: "Todo marked as completed..."
 
-    });
+  });
     
 });
 

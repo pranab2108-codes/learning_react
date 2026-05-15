@@ -1,19 +1,27 @@
-export function Todos(props){
+export function Todos(props) {
 
-    return <div>
+  return (
 
-        {props.todos.map(function(todo) {
+    <div>
 
-            return <div>
+      {props.todos.map(function(todo) {
 
-                <h1>{todo.title}</h1>
-                <h2>{todo.description}</h2>
-                <button>{todo.completed == true ? "Completed" : "Mark as completed"}</button>
+        return (
 
-            </div>
+          <div>
 
-        })}
+            <h1>{todo.title}</h1>
+            <h2>{todo.description}</h2>
+            <button>{todo.completed == true ? "Completed" : "Mark as completed"}</button>
+
+          </div>
+
+        );
+
+      })}
 
     </div>
-    
+
+  );
+
 }

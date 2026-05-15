@@ -4,14 +4,14 @@ mongoose.connect('mongodb+srv://cluster_username:cluster_password@cluster0.bfysx
 
 const todoSchema = mongoose.Schema({
 
-    title: String,
-    description: String,
-    completed: {
+  title: String,
+  description: String,
+  completed: {
 
-        type: Boolean,
-        default: false
+    type: Boolean,
+    default: false
         
-    }
+  }
 
 });
 
