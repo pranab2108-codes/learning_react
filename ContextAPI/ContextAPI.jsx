@@ -48,7 +48,7 @@ function CountRerenderer() {                                          /* Now whe
 function Buttons({ setCount }) {  
 
   const value = useContext(CountContext);                             /* Total 2 buttons are avialable here, one is for increment and other one is for decrement. */
-                                                                      /* The name of state variable may or may bot be same as the variable which uses the useContext, which proves here by using "value" instead of "count". */
+                                                                      /* The name of state variable may or may not be same as the variable which uses the useContext, which proves here by using "value" instead of "count". */
   return <div>   
 
             <button onClick={() => {
