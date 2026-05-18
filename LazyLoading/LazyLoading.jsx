@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
-import {  lazy, Suspense } from 'react';
-const Dashboard = lazy(() => import('./Components/Dashboard.jsx'));                        /* Because of these Dashboard and Landing got export as default, that's why we are importing like this, we don't neeed to import like { Dashboard } and { Landing }, we can also rename here with anyname while import because of they got export as default. */
-const Landing = lazy(() => import('./Components/Landing.jsx'));
+import { lazy, Suspense } from 'react';
+const Dashboard = lazy(() => import('./Components/Dashboard.jsx'));             /* Because of these Dashboard and Landing got export as default, that's why we are importing like this, we don't neeed to import like { Dashboard } and { Landing }, we can also rename here with anyname while import because of they got export as default. */
+const Landing = lazy(() => import('./Components/Landing.jsx'));                 /* These lazy component loads asynchronously, that's why we have to use Suspense. */
 
                                                                                 /* React always bundles the whole thing so when a prticular part will be needed later among them it can be use from there. */      
 function LazyLoading() {                                                        /* Let's suppose in our application there are many pages like Home, Dashboard, Settings, Messages, Profile. */
@@ -23,7 +23,7 @@ function LazyLoading() {                                                        
   
         </BrowserRouter>
   
-      </div>
+      </div>                                                                    /* Here the lazy import is an asynchronous so react needs a fallback UI while waiting for the component file to download, that is exactly what Suspense provides. Suspense should wrap the lazy loaded component. */
   
     );                                                                          /* With Lazy Loading react loads components only when route is visited. */                                                                        
   
@@ -35,37 +35,38 @@ function LazyLoading() {                                                        
   
     return <div>
   
-        <div style={{backgroundColor: "green", color: "white"}}>
-  
-          Hi this is the topbar
-          <button onClick={() => {
-  
-              navigate("/");
-  
-            }}>Landing page
-  
-          </button>
-          <button onClick={() => {
-  
-              navigate("/dashboard");
-  
-            }}>Dashboard page
-  
-          </button>
-  
-        </div>
-  
-    </div>    
-                                                                              /* Now because of this we don't see any hard reloading. */
+              <div style={{backgroundColor: "green", color: "white"}}>
+        
+                Hi this is the topbar
+                <button onClick={() => {
+        
+                    navigate("/");
+        
+                  }}>Landing page
+        
+                </button>
+                
+                <button onClick={() => {
+        
+                    navigate("/dashboard");
+        
+                  }}>Dashboard page
+        
+                </button>
+        
+              </div>
+        
+           </div>    
+                                                                                /* Now because of this we don't see any hard reloading. */
 }
 
 export default LazyLoading;
 
 
-// import { StrictMode } from 'react'                                         /* It should be written in src/main.jsx. */
+// import { StrictMode } from 'react'                                           /* It should be written in src/main.jsx. */
 // import { createRoot } from 'react-dom/client'
 // import './index.css'
-// import LazyLoading from '../LazyLoading/LazyLoading';
+// import LazyLoading from '../LazyLoading/LazyLoading.jsx';
 
 // createRoot(document.getElementById('root')).render(
    
