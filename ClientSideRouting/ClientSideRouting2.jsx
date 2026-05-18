@@ -48,3 +48,15 @@ function ClientSideRouting2() {
 }
 
 export default ClientSideRouting2;
+
+
+// import { StrictMode } from 'react'                                           /* It should be written in src/main.jsx. */
+// import { createRoot } from 'react-dom/client'
+// import './index.css'
+// import ClientSideRouting2 from '../ClientSideRouting/ClientSideRouting2.jsx';
+
+// createRoot(document.getElementById('root')).render(
+   
+//     <ClientSideRouting2/>
+          
+// );

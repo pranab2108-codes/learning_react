@@ -60,3 +60,15 @@ function Appbar() {
 }
 
 export default ClientSideRouting3;
+
+
+// import { StrictMode } from 'react'                                /* It should be written in src/main.jsx. */
+// import { createRoot } from 'react-dom/client'
+// import './index.css'
+// import ClientSideRouting3 from '../ClientSideRouting/ClientSideRouting3.jsx';
+
+// createRoot(document.getElementById('root')).render(
+   
+//     <ClientSideRouting3/>
+          
+// );
