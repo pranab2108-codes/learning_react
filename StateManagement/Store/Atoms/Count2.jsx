@@ -11,7 +11,7 @@ export const countAtom = atom({           /* Atom act as state variable. */
 export const evenSelector = selector({    /* This is same as doing useMemo. */
 
   key: "evenSelector",
-  get: ({props}) => {
+  get: ({ props }) => {
 
     const count = props.get(countAtom);
     return count % 2;
