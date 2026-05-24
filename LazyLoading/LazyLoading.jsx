@@ -8,55 +8,55 @@ function LazyLoading() {                                                        
                                                                                 /* Normally React may bundle all pages together initially, browser downloads JavaScript for all pages, even though user only needs Home page right now, this makes initial loading heavier/slower. */                                                            
   return (
   
-      <div>
+    <div>
   
-        <BrowserRouter> 
+      <BrowserRouter> 
   
-          <Appbar/>
+        <Appbar/>
   
-          <Routes>
+        <Routes>
   
-            <Route path="/dashboard" element={<Suspense fallback={<div>loading...</div>}><Dashboard/></Suspense>}></Route>
-            <Route path="/" element={<Suspense fallback={<div>loading...</div>}><Landing/></Suspense>}></Route>
+          <Route path="/dashboard" element={<Suspense fallback={<div>loading...</div>}><Dashboard/></Suspense>}></Route>
+          <Route path="/" element={<Suspense fallback={<div>loading...</div>}><Landing/></Suspense>}></Route>
   
-          </Routes>
+        </Routes>
   
-        </BrowserRouter>
+      </BrowserRouter>
   
-      </div>                                                                    /* Here the lazy import is an asynchronous so react needs a fallback UI while waiting for the component file to download, that is exactly what Suspense provides. Suspense should wrap the lazy loaded component. */
+    </div>                                                                      /* Here the lazy import is an asynchronous so react needs a fallback UI while waiting for the component file to download, that is exactly what Suspense provides. Suspense should wrap the lazy loaded component. */
   
-    );                                                                          /* With Lazy Loading react loads components only when route is visited. */                                                                        
+  );                                                                            /* With Lazy Loading react loads components only when route is visited. */                                                                        
   
-  }
+}
   
-  function Appbar() {
+function Appbar() {
                                                                                 /* Normally React bundles everything together, So even if the user only opens /, React still downloads Dashboard code, Settings code and all other pages codes also hence the bundle size get increase, but through lazy loading react loads components only when the user visits them. */
-    const navigate = useNavigate();                                             /* Let suppose the user open '/' so only Landing page code loads, then later user open /dashboard so Dashboard component downloads at that moment, it never means it will hit the backend server each time. */
+  const navigate = useNavigate();                                               /* Let suppose the user open '/' so only Landing page code loads, then later user open /dashboard so Dashboard component downloads at that moment, it never means it will hit the backend server each time. */
   
-    return <div>
+  return <div>
   
-              <div style={{backgroundColor: "green", color: "white"}}>
+            <div style={{backgroundColor: "green", color: "white"}}>
         
-                Hi this is the topbar
-                <button onClick={() => {
+              Hi this is the topbar
+              <button onClick={() => {
         
-                    navigate("/");
+                  navigate("/");
         
-                  }}>Landing page
+                }}>Landing page
         
-                </button>
+              </button>
                 
-                <button onClick={() => {
+              <button onClick={() => {
         
-                    navigate("/dashboard");
+                  navigate("/dashboard");
         
-                  }}>Dashboard page
+                }}>Dashboard page
         
-                </button>
+              </button>
         
-              </div>
+            </div>
         
-           </div>    
+         </div>    
                                                                                 /* Now because of this we don't see any hard reloading. */
 }
 
