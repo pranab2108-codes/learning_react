@@ -27,3 +27,5 @@ export const notificationsAtom = atom({
   default: 12
 
 });
+
+
