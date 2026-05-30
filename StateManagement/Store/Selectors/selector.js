@@ -1,9 +1,9 @@
 import { atom, selector } from "recoil";
 
 
-export const countAtom = atom({           /* Atom act as state variable. */
+export const countAtom = atom({           
 
-  key: "countAtom",                       /* Here atom stores an object, here key is for uniqueness. */
+  key: "countAtom",                       
   default: 0
 
 });
