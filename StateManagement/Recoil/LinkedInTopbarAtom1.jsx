@@ -17,7 +17,7 @@ function MainAppComponent() {
   console.log("Me got rerender");
   const networkAtomCount = useRecoilValue(networkAtom);                                           /* We use the useRecoilValue hook only at that time when we know we only need the state variable which is also called as an atom in this Recoil case, so no updater function need here at all. */
   const jobAtomCount = useRecoilValue(jobsAtom);
-  const MessagingAtomCount = useRecoilValue(messagingAtom);
+  const messagingAtomCount = useRecoilValue(messagingAtom);
   const [notificationAtomCount, setNotificationAtomCount] = useRecoilState(notificationsAtom);    /* Here we use useRecoilState hook only that time when we know we use both the state variable or atom and it's updater function, not in case either we need only atom or it's updater function. */
 
   return (
@@ -27,7 +27,7 @@ function MainAppComponent() {
       <button>Home</button>
       <button>My network ({networkAtomCount >= 100 ? "99+" : networkAtomCount})</button>
       <button>Jobs ({jobAtomCount})</button>
-      <button>Messaging ({MessagingAtomCount})</button>
+      <button>Messaging ({messagingAtomCount})</button>
       <button>Notifications ({notificationAtomCount})</button>
       <button onClick={() => {                                                                    /* Let's suppose each time we get clicked the Me button it incrementing the notificationAtomCount, so here we need notificationAtomCount atom and it's updater function setNotificationAtomCount, that's why above we had to mentioned the useRecoilState hook for this case. */
 

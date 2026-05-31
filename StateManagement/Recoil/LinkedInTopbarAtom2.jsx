@@ -18,13 +18,13 @@ function MainAppComponent() {
   console.log("Me got rerender");
   const networkAtomCount = useRecoilValue(networkAtom);
   const jobAtomCount = useRecoilValue(jobsAtom);
-  const MessagingAtomCount = useRecoilValue(messagingAtom);
+  const messagingAtomCount = useRecoilValue(messagingAtom);
   const notificationAtomCount = useRecoilValue(notificationsAtom);
   const totalNotificationCount = useMemo(() => {
                                                                                           /* Here each and every time when MainAppComponent getting rerendering this operation is running again and again, we should avoid it, so we can use useMemo and if this calculatio will be need by another component then also we have to declare and define this again. */
-    return networkAtomCount + jobAtomCount + MessagingAtomCount + notificationAtomCount;
+    return networkAtomCount + jobAtomCount + messagingAtomCount + notificationAtomCount;
 
-  }, [networkAtomCount, jobAtomCount, MessagingAtomCount, notificationAtomCount]);
+  }, [networkAtomCount, jobAtomCount, messagingAtomCount, notificationAtomCount]);
                                                                                           /* But the optimized way is to use selector because we can see it clearly totalNotificationCount is fully depends on 4 things. */    
   return (                                                                                /* The problem of this approach is let's suppose in future there will be another variable which depends on totalNotificationCount and something among these then when we call these things again in another file or component we have to declare again in there, so that's why we should use selector. */
 
@@ -33,7 +33,7 @@ function MainAppComponent() {
       <button>Home</button>
       <button>My network ({networkAtomCount >= 100 ? "99+" : networkAtomCount})</button>
       <button>Jobs ({jobAtomCount})</button>
-      <button>Messaging ({MessagingAtomCount})</button>
+      <button>Messaging ({messagingAtomCount})</button>
       <button>Notifications ({notificationAtomCount})</button>
       <button>Me ({totalNotificationCount})</button>                                             
 

@@ -17,7 +17,7 @@ function MainAppComponent() {
   console.log("Me got rerender");
   const networkAtomCount = useRecoilValue(networkAtom);
   const jobAtomCount = useRecoilValue(jobsAtom);
-  const MessagingAtomCount = useRecoilValue(messagingAtom);
+  const messagingAtomCount = useRecoilValue(messagingAtom);
   const notificationAtomCount = useRecoilValue(notificationsAtom);
   const totalNotificationCount = useRecoilValue(totalNotificationSelector);           /* Here we are using selector the second way of reducing the uses of this operation, so that if any other component will ever need this calculation so we don't need to declare and define again. */
                                                                   
@@ -28,7 +28,7 @@ function MainAppComponent() {
       <button>Home</button>
       <button>My network ({networkAtomCount >= 100 ? "99+" : networkAtomCount})</button>
       <button>Jobs ({jobAtomCount})</button>
-      <button>Messaging ({MessagingAtomCount})</button>
+      <button>Messaging ({messagingAtomCount})</button>
       <button>Notifications ({notificationAtomCount})</button>
       <button>Me ({totalNotificationCount})</button>                                             
 
