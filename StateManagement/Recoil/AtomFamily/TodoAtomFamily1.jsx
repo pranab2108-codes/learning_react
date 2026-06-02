@@ -2,7 +2,7 @@ import { RecoilRoot, useRecoilValue } from 'recoil';
 import { todoAtom1, todoAtom2 } from './todosAtoms.js';
 
 
-function TodoAtomFamily1() {                                   /* We know this, there can be multiple todos, our main problem definition was we need to create a comonent which will take the todo id as input and renders the todo. */
+function TodoAtomFamily1() {                                  /* We know this, there can be multiple todos, our main problem definition was we need to create a comonent which will take the todo id as input and renders the todo. */
 
   return <RecoilRoot>
 
@@ -10,6 +10,7 @@ function TodoAtomFamily1() {                                   /* We know this, 
             <Todo id={2}/>
             
          </RecoilRoot>
+
 }
 
 function Todo({ id }) {
@@ -17,7 +18,7 @@ function Todo({ id }) {
   const currentTodo1 = useRecoilValue(todoAtom1);             /* Here we are creating 2 atoms for different todos, which restricting the todos to be dynamic, This does not scale well because every new todo would require creating a new atom manually. */
   const currentTodo2 = useRecoilValue(todoAtom2);             /* So in this way it is very difficult to create atoms for each todos, so it is very time taking. */
 
-  if(id === 1){                                               /* The earlier approach which we were thinking like putting all the todos inside of a single atom and render them is also a bad idea because let suppose we will update a single todo among them then ofcourse the atom change/updated so rerender fully. */
+  if(id === 1) {                                              /* The earlier approach which we were thinking like putting all the todos inside of a single atom and render them is also a bad idea because let suppose we will update a single todo among them then ofcourse the atom change/updated so rerender fully. */
                                                               /* Even though we have not updated few todos also get rerender, which is unneccessary. */
     return <div>
 
@@ -26,7 +27,7 @@ function Todo({ id }) {
 
            </div>
 
-  }else if(id === 2){
+  }else if(id === 2) {
     
     return (
 

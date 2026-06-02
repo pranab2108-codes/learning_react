@@ -13,6 +13,7 @@ function TodoAtomFamily2() {
             <TodoUpdater id={3}/>
             
          </RecoilRoot>
+
 }
 
 function Todo({ id }) {
@@ -57,13 +58,13 @@ function TodoUpdater({ id }) {
 export default TodoAtomFamily2;
 
 
-// import { StrictMode } from 'react';
+// import { StrictMode } from 'react';                              /* It should be writen in src/main.jsx. */
 // import { createRoot } from 'react-dom/client';
 // import './index.css';
 // import TodoAtomFamily2 from '../StateManagement/Recoil/AtomFamily/TodoAtomFamily.jsx';
 
 // createRoot(document.getElementById('root')).render(
    
-//     <TodoAtomFamily/>
+//     <TodoAtomFamily2/>
           
 // );
