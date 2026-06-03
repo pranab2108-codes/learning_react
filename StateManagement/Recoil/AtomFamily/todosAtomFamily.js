@@ -1,5 +1,5 @@
 import { atomFamily } from "recoil";
-import { TODOS } from "./todos.js";
+import { todos } from "./todos.js";
 
 
 export const todosAtomFamily = atomFamily({             /* Atoms can not have asynchronous backend call in their default value, so they need to use selector. */
@@ -7,7 +7,7 @@ export const todosAtomFamily = atomFamily({             /* Atoms can not have as
   key: 'todosAtomFamily',
   default: id => {
 
-    return TODOS.find(x => x.id === id);                /* This is exactly the right approach. */
+    return todos.find(x => x.id === id);                /* This is exactly the right approach. */
 
   }
 

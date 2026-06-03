@@ -3,7 +3,7 @@ import { todosAtomFamily } from './todosAtomFamily.js';
 import { useEffect } from 'react';
 
 
-function TodoAtomFamily2() {
+function TodosAtomFamily2() {
 
   return <RecoilRoot>
 
@@ -55,16 +55,16 @@ function TodoUpdater({ id }) {
 
 }
 
-export default TodoAtomFamily2;
+export default TodosAtomFamily2;
 
 
 // import { StrictMode } from 'react';                              /* It should be writen in src/main.jsx. */
 // import { createRoot } from 'react-dom/client';
 // import './index.css';
-// import TodoAtomFamily2 from '../StateManagement/Recoil/AtomFamily/TodoAtomFamily.jsx';
+// import TodosAtomFamily2 from '../StateManagement/Recoil/AtomFamily/TodosAtomFamily2.jsx';
 
 // createRoot(document.getElementById('root')).render(
    
-//     <TodoAtomFamily2/>
+//     <TodosAtomFamily2/>
           
 // );

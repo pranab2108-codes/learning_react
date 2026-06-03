@@ -1,8 +1,8 @@
 import { RecoilRoot, useRecoilValue } from 'recoil';
-import { todoAtom1, todoAtom2 } from './todosAtoms.js';
+import { todoAtom1, todoAtom2 } from './todoAtom.js';
 
 
-function TodoAtomFamily1() {                                  /* We know this, there can be multiple todos, our main problem definition was we need to create a comonent which will take the todo id as input and renders the todo. */
+function TodosAtomFamily1() {                                 /* We know this, there can be multiple todos, our main problem definition was we need to create a comonent which will take the todo id as input and renders the todo. */
 
   return <RecoilRoot>
 
@@ -45,16 +45,16 @@ function Todo({ id }) {
 
 }
 
-export default TodoAtomFamily1;
+export default TodosAtomFamily1;
 
 
 // import { StrictMode } from 'react';                        /* It should be written in src/main.jsx. */
 // import { createRoot } from 'react-dom/client';
 // import './index.css';
-// import TodoAtomFamily1 from '../StateManagement/Recoil/AtomFamily/TodoAtomFamily1.jsx';
+// import TodosAtomFamily1 from '../StateManagement/Recoil/AtomFamily/TodosAtomFamily1.jsx';
 
 // createRoot(document.getElementById('root')).render(
    
-//     <TodoAtomFamily1/>
+//     <TodosAtomFamily1/>
           
 // );

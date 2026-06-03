@@ -3,7 +3,7 @@ import { todosAtomFamily } from './todosSelectorFamily.js';
 import { useEffect } from 'react';
 
 
-function TodoSelectorFamily() {
+function TodosSelectorFamily() {
 
   return <RecoilRoot>
 
@@ -25,7 +25,7 @@ function Todo({ id }) {
       <>
 
         <h1><b>{currentTodo.todo}</b></h1>                                     
-        <h3>{currentTodo.completed ? "Completed" : "Not Completed"}</h3>
+        <h3>{currentTodo.completed ? "Completed" : "Not completed"}</h3>
 
       </>
                                                                                 /* It shows in a way like it have id, todo(same as title), completed and userID field only, no any other fields. */
@@ -56,16 +56,16 @@ function TodoUpdater({ id }) {
 
 }
 
-export default TodoSelectorFamily;
+export default TodosSelectorFamily;
 
 
 // import { StrictMode } from 'react';                                          /* It should be written inside of src/main.jsx. */
 // import { createRoot } from 'react-dom/client';
 // import './index.css';
-// import TodoSelectorFamily from '../StateManagement/Recoil/AtomFamily/TodoSelectorFamily.jsx';
+// import TodosSelectorFamily from '../StateManagement/Recoil/AtomFamily/TodosSelectorFamily.jsx';
 
 // createRoot(document.getElementById('root')).render(
    
-//     <TodoSelectorFamily/>
+//     <TodosSelectorFamily/>
           
 // );

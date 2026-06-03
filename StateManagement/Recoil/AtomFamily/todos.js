@@ -1,4 +1,4 @@
-export const TODOS = [{
+export const todos = [{
 
   id: 1,
   title: "Go to GYM",

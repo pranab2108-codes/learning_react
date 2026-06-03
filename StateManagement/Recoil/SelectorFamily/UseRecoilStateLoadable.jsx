@@ -1,4 +1,4 @@
-import { RecoilRoot, useRecoilStateLoadable, useSetRecoilState } from 'recoil';
+import { RecoilRoot, useRecoilStateLoadable } from 'recoil';
 import { todosAtomFamily } from './todosSelectorFamily.js';
 import { useEffect } from 'react';
 
@@ -10,7 +10,6 @@ function UseRecoilStateLoadable() {
             <Todo id={5}/>                                   
             <Todo id={4}/>
             <Todo id={3}/>
-            <TodoUpdater id={3}/>
             
          </RecoilRoot>
 
@@ -19,6 +18,27 @@ function UseRecoilStateLoadable() {
 function Todo({ id }) {
                                                                                     /* Here useRecoilStateLoadable is being used because as we know when the frontend asynchronously fetching the data like todos here from backend it might take few times, so in mean time the frontend need to make sure it still should engage the end user untill it give the data back to user. */
   const [currentTodo, setCurrentTodo] = useRecoilStateLoadable(todosAtomFamily(id));/* The useRecoilStateLoadable not gives the todo only it comes with an object structure like where it contains contents, state. */         
+
+  useEffect(() => {
+
+    if(id === 3) {
+
+      setTimeout(() => {
+
+        setCurrentTodo({
+
+          id: 3,
+          todo: "So this is useRecoilStateLoadable",
+          completed: true,
+          userId: 1
+
+        });
+
+      }, 5000);
+
+    }
+
+  }, []);
 
   if(currentTodo.state === "loading") {
 
@@ -35,36 +55,13 @@ function Todo({ id }) {
       <>
 
         <h1><b>{currentTodo.contents.todo}</b></h1>                                     
-        <h3>{currentTodo.contents.completed ? "Completed" : "Not Completed"}</h3>
+        <h3>{currentTodo.contents.completed ? "Completed" : "Not completed"}</h3>
 
       </>
 
     );
 
   }
-
-}
-
-function TodoUpdater({ id }) {
-
-  const updateTodo = useSetRecoilState(todosAtomFamily(id));
-
-  useEffect(() => {
-
-    setTimeout(() => {
-
-      updateTodo({
-
-        id: 3,
-        todo: "So this is useRecoilStateLoadable",
-        completed: true,
-        userId: 1
-
-      });
-
-    }, 5000);
-
-  }, []);
 
 }
 
